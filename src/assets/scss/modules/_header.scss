@@ -1,0 +1,25 @@
+.site-header {
+	.menu.dropdown {
+		> li > a.button {
+			margin-left: 1rem;
+		}
+	}
+}
+
+.off-canvas {
+	.menu {
+		.button {
+			margin-top: 1rem;
+			margin-left: 1rem;
+			margin-right: 1rem;
+		}
+	}
+}
+
+$titlebar-icon-color: $primary-color;
+
+body.logged-in.admin-bar {
+	.off-canvas {
+		top: 32px;
+	}
+}

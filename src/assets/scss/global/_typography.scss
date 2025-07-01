@@ -1,0 +1,13 @@
+@for $i from 1 through 6 {
+  .has-h-#{$i}-font-size {
+  	@extend h#{$i};
+  }
+}
+
+.has-default-font-size{
+  font-size: $global-font-size;
+}
+
+.has-lead-font-size{
+  font-size: $lead-font-size;
+}

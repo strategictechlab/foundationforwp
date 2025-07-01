@@ -1,0 +1,9 @@
+.site-footer {
+    background: $light-gray;
+
+    .menu {
+        @include breakpoint(medium down) {
+            justify-content: center;
+        }
+    }
+}

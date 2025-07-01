@@ -1,0 +1,35 @@
+/*!
+ * Gutenberg Editor Styles
+ */
+
+/** === Includes === */
+
+@charset 'utf-8';
+@use 'sass:color';
+
+@import 'settings';
+@import 'foundation';
+
+html :where(.editor-styles-wrapper) {
+    .block-editor-block-list__layout.is-root-container {
+        /** === Base Color Palatte === */
+        @each $color, $code in $foundation-palette {
+
+            .has-#{$color}-background-color {
+                background-color: $code;
+            }
+
+            .has-#{$color}-color {
+                color: $code;
+            }
+
+            .has-#{$color}-gradient-background {
+                background: linear-gradient(90deg,rgba($code, 1) 0%, rgba(color.scale($code, $lightness: -30%), 1) 100%)
+            }
+
+            .has-#{$color}-to-semi-transparent-gradient-background {
+                background: linear-gradient(90deg,rgba($code, 1) 0%, rgba($code, 0.65) 100%);
+            }
+        }
+    }
+}
