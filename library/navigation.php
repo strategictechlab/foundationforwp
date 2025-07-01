@@ -83,8 +83,8 @@ if ( ! function_exists( 'foundationwp_footer_menu' ) ) {
 */
 if ( ! function_exists( 'foundationwp_add_menuclass' ) ) {
 	function foundationwp_add_menuclass( $ulclass ) {
-		$find    = array( '/<a rel="button"/', '/<a title=".*?" rel="button"/' );
-		$replace = array( '<a rel="button" class="button"', '<a rel="button" class="button"' );
+		$find    = array( '/rel="button"/' );
+		$replace = array( 'rel="button" class="button"' );
 
 		return preg_replace( $find, $replace, $ulclass, 1 );
 	}
